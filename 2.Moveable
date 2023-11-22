@@ -1,0 +1,27 @@
+public interface Moveable {
+    void move();
+}
+public interface Rotatable extends Moveable {
+    void rotate();
+}
+public class Car implements Rotatable {
+    private String model;
+
+    @Override
+    public void move() {
+        System.out.println(model + " is moving.");
+    }
+
+    @Override
+    public void rotate() {
+        System.out.println(model + " is rotating.");
+    }
+}
+public class Bicycle implements Moveable {
+    private String brand;
+
+    @Override
+    public void move() {
+        System.out.println(brand + " bicycle is moving.");
+    }
+}
