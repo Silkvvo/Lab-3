@@ -15,7 +15,6 @@ public class MyArrayList<E> implements MyCollection<E> {
             elements = Arrays.copyOf(elements, size * 2);
         }
     }
-
     @Override
     public boolean add(E element) {
         ensureCapacity();
@@ -50,26 +49,22 @@ public class MyArrayList<E> implements MyCollection<E> {
             }
         }
         return false;
-    }
-
+}
     @Override
     public int size() {
         return size;
-    }
-
+}
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
-
     @Override
     public void clear() {
         for (int i = 0; i < size; i++) {
             elements[i] = null;
         }
         size = 0;
-    }
-
+}
     @Override
     public Object[] toArray() {
         return Arrays.copyOf(elements, size);
